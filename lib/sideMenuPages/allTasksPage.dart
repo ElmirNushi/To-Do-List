@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:to_dolist/main.dart';
 import 'tomorrowPage.dart';
+import 'package:to_dolist/calendar.dart';
 
 class tasksPage extends StatefulWidget {
   @override
@@ -35,14 +36,14 @@ class _tasksPageState extends State<tasksPage> {
               ),
             ),
             new ListTile(
-              leading: Icon(Icons.today),
+              leading: Icon(Icons.view_agenda),
               title: new Text('Home Page'),
               onTap: () {
                 Navigator.of(context).pop();
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => listScreen()));},
             ),
-            Divider(),
+            Divider(), Divider(),
             new ListTile(
               leading: Icon(Icons.event),
               title: new Text('Tomorrow Tasks'),
@@ -50,6 +51,17 @@ class _tasksPageState extends State<tasksPage> {
                 Navigator.push(context, MaterialPageRoute(
                   builder: (context) => pageTomorrow(),
                 ));
+              },
+            ),
+            Divider(), Divider(),
+            new ListTile(
+              leading: Icon(Icons.calendar_today),
+              title: new Text('Calendar'),
+              onTap: (){
+                Navigator.of(context).pop();
+                Navigator.push(context, MaterialPageRoute(
+                    builder: (context) => calendar())
+                );
               },
             ),
             Divider(),
