@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'allTasksPage.dart';
+import 'file:///C:/Users/Dell/AndroidStudioProjects/to_dolist/lib/sideMenuPages/tomorrowPage.dart';
+import 'sideMenuPages/allTasksPage.dart';
 
 void main() {
   runApp(MyApp());
@@ -27,15 +28,38 @@ class listScreen extends StatelessWidget {
         ),
       ),
       drawer: new Drawer(
-        child: ListView(children: <Widget>[
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: <Widget>[
+          new DrawerHeader(child: Text('Home Page', style: TextStyle(
+            fontFamily: 'BebasNeue',
+            fontSize: 35.0,
+          color: Colors.white),),
+            decoration: BoxDecoration(
+              color: Color(0xFF373F51),
+              ),
+            ),
           new ListTile(
-            title: new Text('All your tasks'),
+            leading: Icon(Icons.event),
+            title: new Text('Tomorrow Tasks'),
             onTap: (){
+              Navigator.of(context).pop();
               Navigator.push(context, MaterialPageRoute(
-                  builder: (context) => tasksPage())
+                  builder: (context) => pageTomorrow())
               );
             },
           ),
+          Divider(),
+          new ListTile(
+            leading: Icon(Icons.date_range),
+            title: new Text('All Your Tasks'),
+            onTap: (){
+              Navigator.push(context, MaterialPageRoute(
+                builder: (context) => tasksPage(),
+              ));
+            },
+          ),
+          Divider(),
         ],
         ),
       ),
@@ -43,7 +67,6 @@ class listScreen extends StatelessWidget {
     );
   }
 }
-
 
 class toDoList extends StatefulWidget {
   @override
