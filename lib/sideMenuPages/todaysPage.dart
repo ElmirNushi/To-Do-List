@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'allTasksPage.dart';
+import 'upComingPage.dart';
 import '../main.dart';
-import 'package:to_dolist/calendar.dart';
+import 'package:to_dolist/calendarPage.dart';
+import 'settingsPage.dart';
 
 class pageTomorrow extends StatefulWidget {
   @override
@@ -16,7 +17,7 @@ class _pageTomorrowState extends State<pageTomorrow> {
       appBar: AppBar(
         backgroundColor: Color(0xFF373F51),
         title: Text(
-          'Tomorrow Tasks',
+          'Today',
           style: TextStyle(
             color: Color(0xFFF2FDFF),
             fontFamily: 'BebasNeue',
@@ -26,8 +27,9 @@ class _pageTomorrowState extends State<pageTomorrow> {
       ),
       drawer: new Drawer(
         child: ListView(
+          padding: EdgeInsets.zero,
           children: <Widget>[
-            new DrawerHeader(child: Text('Tomorrow Tasks', style: TextStyle(
+            new DrawerHeader(child: Text('Today', style: TextStyle(
                 fontFamily: 'BebasNeue',
                 fontSize: 35.0,
                 color: Colors.white),),
@@ -35,17 +37,18 @@ class _pageTomorrowState extends State<pageTomorrow> {
                 color: Color(0xFF373F51),
               ),
             ),
+            SizedBox(height: 5),
             new ListTile(
               leading: Icon(Icons.view_agenda),
-              title: new Text('Home Page'),
+              title: new Text('Inbox'),
               onTap: () {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => listScreen()));},
             ),
-            Divider(), Divider(),
+            SizedBox(height: 5),
             new ListTile(
               leading: Icon(Icons.date_range),
-              title: new Text('All your tasks'),
+              title: new Text('Upcoming Tasks'),
               onTap: (){
                 Navigator.of(context).pop();
                 Navigator.push(context, MaterialPageRoute(
@@ -53,7 +56,7 @@ class _pageTomorrowState extends State<pageTomorrow> {
                 );
               },
             ),
-            Divider(),Divider(),
+            SizedBox(height: 5),
             new ListTile(
               leading: Icon(Icons.calendar_today),
               title: new Text('Calendar'),
@@ -64,7 +67,18 @@ class _pageTomorrowState extends State<pageTomorrow> {
                 );
               },
             ),
-            Divider(),
+            Divider(color: Colors.black54,),
+            SizedBox(height: 5),
+            new ListTile(
+              leading: Icon(Icons.settings),
+              title: new Text('Settings'),
+              onTap: (){
+                Navigator.of(context).pop();
+                Navigator.push(context, MaterialPageRoute(
+                    builder: (context) => settingPage())
+                );
+              },
+            ),
           ],
         ),
       ),

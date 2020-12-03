@@ -27,4 +27,7 @@ flutter:
     - family: BebasNeue
       fonts:
         - asset: fonts/BebasNeue-Regular.ttf
+    - family: Abel
+      fonts:
+        - asset: fonts/Abel-Regular.ttf
 
