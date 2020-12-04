@@ -10,8 +10,8 @@ class EventAddPage extends StatefulWidget {
 
 class _EventAddPageState extends State<EventAddPage> {
 
-  String _selectedDate = 'Pick Date';
-  String _selectedTime = 'Pick Time';
+  String _selectedDate = 'Pick Date For The Task';
+  String _selectedTime = 'Pick Time For The Task';
 
   Future _pickDate() async {
     DateTime datepick = await showDatePicker(
@@ -43,9 +43,9 @@ class _EventAddPageState extends State<EventAddPage> {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
-          Center(child: Text('Add new task')),
+          Center(child: Text('Add new a task')),
           SizedBox(height: 24,),
-          customTextField(labelText: 'Enter task name'),
+          customTextField(labelText: 'Enter task name: '),
           SizedBox(height: 10),
           _dateTimePicker(Icons.date_range, _pickDate, _selectedDate),
           SizedBox(height: 10),

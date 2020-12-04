@@ -16,8 +16,6 @@ class CustomButton extends StatelessWidget {
     this.borderColor,
 });
 
-
-
   @override
   Widget build(BuildContext context) {
     return MaterialButton(

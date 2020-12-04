@@ -39,7 +39,7 @@ class _tasksPageState extends State<tasksPage> {
             ),
             SizedBox(height: 5),
             new ListTile(
-              leading: Icon(Icons.view_agenda),
+              leading: Icon(Icons.view_agenda, color: Color(0xFF373F51), size: 30.0,),
               title: new Text('Inbox'),
               onTap: () {
                 Navigator.of(context).pop();
@@ -48,7 +48,7 @@ class _tasksPageState extends State<tasksPage> {
             ),
             SizedBox(height: 5),
             new ListTile(
-              leading: Icon(Icons.event),
+              leading: Icon(Icons.event, color: Color(0xFF373F51), size: 30.0,),
               title: new Text('Today'),
               onTap: (){
                 Navigator.push(context, MaterialPageRoute(
@@ -58,7 +58,7 @@ class _tasksPageState extends State<tasksPage> {
             ),
             SizedBox(height: 5),
             new ListTile(
-              leading: Icon(Icons.calendar_today),
+              leading: Icon(Icons.calendar_today, color: Color(0xFF373F51), size: 30.0,),
               title: new Text('Calendar'),
               onTap: (){
                 Navigator.of(context).pop();
@@ -71,7 +71,7 @@ class _tasksPageState extends State<tasksPage> {
               color: Colors.black54,
             ),
             new ListTile(
-              leading: Icon(Icons.settings),
+              leading: Icon(Icons.settings, color: Color(0xFF373F51), size: 30.0,),
               title: new Text('Settings'),
               onTap: (){
                 Navigator.of(context).pop();

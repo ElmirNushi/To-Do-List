@@ -39,7 +39,7 @@ class _pageTomorrowState extends State<pageTomorrow> {
             ),
             SizedBox(height: 5),
             new ListTile(
-              leading: Icon(Icons.view_agenda),
+              leading: Icon(Icons.view_agenda, color: Color(0xFF373F51), size: 30.0,),
               title: new Text('Inbox'),
               onTap: () {
                 Navigator.push(context,
@@ -47,7 +47,7 @@ class _pageTomorrowState extends State<pageTomorrow> {
             ),
             SizedBox(height: 5),
             new ListTile(
-              leading: Icon(Icons.date_range),
+              leading: Icon(Icons.date_range, color: Color(0xFF373F51), size: 30.0,),
               title: new Text('Upcoming Tasks'),
               onTap: (){
                 Navigator.of(context).pop();
@@ -58,7 +58,7 @@ class _pageTomorrowState extends State<pageTomorrow> {
             ),
             SizedBox(height: 5),
             new ListTile(
-              leading: Icon(Icons.calendar_today),
+              leading: Icon(Icons.calendar_today, color: Color(0xFF373F51), size: 30.0,),
               title: new Text('Calendar'),
               onTap: (){
                 Navigator.of(context).pop();

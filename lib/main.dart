@@ -46,7 +46,7 @@ class listScreen extends StatelessWidget {
             ),
             SizedBox(height: 5),
           new ListTile(
-            leading: Icon(Icons.event, color: Color(0xFF373F51)),
+            leading: Icon(Icons.event, color: Color(0xFF373F51), size: 30.0,),
             title: new Text('Today'),
             onTap: (){
               Navigator.of(context).pop();
@@ -57,7 +57,7 @@ class listScreen extends StatelessWidget {
           ),
             SizedBox(height: 5),
           new ListTile(
-            leading: Icon(Icons.date_range, color: Color(0xFF373F51)),
+            leading: Icon(Icons.date_range, color: Color(0xFF373F51), size: 30.0,),
             title: new Text('Upcoming Tasks'),
             onTap: (){
               Navigator.push(context, MaterialPageRoute(
@@ -67,7 +67,7 @@ class listScreen extends StatelessWidget {
           ),
             SizedBox(height: 5),
             new ListTile(
-              leading: Icon(Icons.calendar_today, color: Color(0xFF373F51)),
+              leading: Icon(Icons.calendar_today, color: Color(0xFF373F51), size: 30.0,),
               title: new Text('Calendar'),
               onTap: (){
                 Navigator.of(context).pop();
@@ -81,7 +81,7 @@ class listScreen extends StatelessWidget {
             ),
             SizedBox(height: 5),
             new ListTile(
-              leading: Icon(Icons.settings, color: Color(0xFF373F51)),
+              leading: Icon(Icons.settings, color: Color(0xFF373F51), size: 30.0,),
               title: new Text('Settings'),
               onTap: (){
                 Navigator.of(context).pop();
@@ -119,19 +119,19 @@ class _toDoListState extends State<toDoList> {
           }
         );
       },
-      child: Icon(Icons.add),
-        backgroundColor: Color(0xFF373F51),
+      child: Icon(Icons.add, color: Color(0xFF373F51), size: 30.0,),
+        backgroundColor: Colors.white,
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: BottomAppBar(
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
-            IconButton(icon: Icon(Icons.settings), onPressed: (){
+            IconButton(icon: Icon(Icons.settings, color: Color(0xFF373F51), size: 30.0,), onPressed: (){
               Navigator.push(context, MaterialPageRoute(
                   builder: (context) => settingPage()),);
             },),
-            IconButton(icon: Icon(Icons.calendar_today), onPressed: (){
+            IconButton(icon: Icon(Icons.calendar_today, color: Color(0xFF373F51), size: 30.0,), onPressed: (){
               Navigator.push(context, MaterialPageRoute(
                   builder: (context) => calendar()),);
             },),
