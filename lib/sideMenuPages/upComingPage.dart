@@ -39,8 +39,8 @@ class _tasksPageState extends State<tasksPage> {
             ),
             SizedBox(height: 5),
             new ListTile(
-              leading: Icon(Icons.view_agenda, color: Color(0xFF373F51), size: 30.0,),
-              title: new Text('Inbox'),
+              leading: Icon(Icons.view_agenda, color: Color(0xFF373F51), size: 25.0,),
+              title: new Text('Inbox', style: TextStyle(fontFamily: 'Abel', fontSize: 17.0),),
               onTap: () {
                 Navigator.of(context).pop();
                 Navigator.push(context,
@@ -48,8 +48,8 @@ class _tasksPageState extends State<tasksPage> {
             ),
             SizedBox(height: 5),
             new ListTile(
-              leading: Icon(Icons.event, color: Color(0xFF373F51), size: 30.0,),
-              title: new Text('Today'),
+              leading: Icon(Icons.event, color: Color(0xFF373F51), size: 25.0,),
+              title: new Text('Today', style: TextStyle(fontFamily: 'Abel', fontSize: 17.0),),
               onTap: (){
                 Navigator.push(context, MaterialPageRoute(
                   builder: (context) => pageTomorrow(),
@@ -58,8 +58,8 @@ class _tasksPageState extends State<tasksPage> {
             ),
             SizedBox(height: 5),
             new ListTile(
-              leading: Icon(Icons.calendar_today, color: Color(0xFF373F51), size: 30.0,),
-              title: new Text('Calendar'),
+              leading: Icon(Icons.calendar_today, color: Color(0xFF373F51), size: 25.0,),
+              title: new Text('Calendar', style: TextStyle(fontFamily: 'Abel', fontSize: 17.0),),
               onTap: (){
                 Navigator.of(context).pop();
                 Navigator.push(context, MaterialPageRoute(
@@ -71,8 +71,8 @@ class _tasksPageState extends State<tasksPage> {
               color: Colors.black54,
             ),
             new ListTile(
-              leading: Icon(Icons.settings, color: Color(0xFF373F51), size: 30.0,),
-              title: new Text('Settings'),
+              leading: Icon(Icons.settings, color: Color(0xFF373F51), size: 25.0,),
+              title: new Text('Settings', style: TextStyle(fontFamily: 'Abel', fontSize: 17.0),),
               onTap: (){
                 Navigator.of(context).pop();
                 Navigator.push(context, MaterialPageRoute(

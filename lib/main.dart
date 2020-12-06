@@ -46,8 +46,8 @@ class listScreen extends StatelessWidget {
             ),
             SizedBox(height: 5),
           new ListTile(
-            leading: Icon(Icons.event, color: Color(0xFF373F51), size: 30.0,),
-            title: new Text('Today'),
+            leading: Icon(Icons.event, color: Color(0xFF373F51), size: 25.0,),
+            title: new Text('Today', style: TextStyle(fontFamily: 'Abel', fontSize: 17.0),),
             onTap: (){
               Navigator.of(context).pop();
               Navigator.push(context, MaterialPageRoute(
@@ -57,8 +57,8 @@ class listScreen extends StatelessWidget {
           ),
             SizedBox(height: 5),
           new ListTile(
-            leading: Icon(Icons.date_range, color: Color(0xFF373F51), size: 30.0,),
-            title: new Text('Upcoming Tasks'),
+            leading: Icon(Icons.date_range, color: Color(0xFF373F51), size: 25.0,),
+            title: new Text('Upcoming Tasks', style: TextStyle(fontFamily: 'Abel', fontSize: 17.0),),
             onTap: (){
               Navigator.push(context, MaterialPageRoute(
                 builder: (context) => tasksPage(),
@@ -67,8 +67,8 @@ class listScreen extends StatelessWidget {
           ),
             SizedBox(height: 5),
             new ListTile(
-              leading: Icon(Icons.calendar_today, color: Color(0xFF373F51), size: 30.0,),
-              title: new Text('Calendar'),
+              leading: Icon(Icons.calendar_today, color: Color(0xFF373F51), size: 25.0,),
+              title: new Text('Calendar', style: TextStyle(fontFamily: 'Abel', fontSize: 17.0),),
               onTap: (){
                 Navigator.of(context).pop();
                 Navigator.push(context, MaterialPageRoute(
@@ -81,8 +81,8 @@ class listScreen extends StatelessWidget {
             ),
             SizedBox(height: 5),
             new ListTile(
-              leading: Icon(Icons.settings, color: Color(0xFF373F51), size: 30.0,),
-              title: new Text('Settings'),
+              leading: Icon(Icons.settings, color: Color(0xFF373F51), size: 25.0,),
+              title: new Text('Settings', style: TextStyle(fontFamily: 'Abel', fontSize: 17.0),),
               onTap: (){
                 Navigator.of(context).pop();
                 Navigator.push(context, MaterialPageRoute(
@@ -119,7 +119,7 @@ class _toDoListState extends State<toDoList> {
           }
         );
       },
-      child: Icon(Icons.add, color: Color(0xFF373F51), size: 30.0,),
+      child: Icon(Icons.add, color: Color(0xFF373F51), size: 38.0,),
         backgroundColor: Colors.white,
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
@@ -127,11 +127,11 @@ class _toDoListState extends State<toDoList> {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
-            IconButton(icon: Icon(Icons.settings, color: Color(0xFF373F51), size: 30.0,), onPressed: (){
+            IconButton(icon: Icon(Icons.settings, color: Color(0xFF373F51), size: 25.0,), onPressed: (){
               Navigator.push(context, MaterialPageRoute(
                   builder: (context) => settingPage()),);
             },),
-            IconButton(icon: Icon(Icons.calendar_today, color: Color(0xFF373F51), size: 30.0,), onPressed: (){
+            IconButton(icon: Icon(Icons.calendar_today, color: Color(0xFF373F51), size: 25.0,), onPressed: (){
               Navigator.push(context, MaterialPageRoute(
                   builder: (context) => calendar()),);
             },),

@@ -32,7 +32,7 @@ class _otherSettingPageState extends State<otherSettingPage> {
       children: <Widget>[
         SizedBox(height: 20),
         new ListTile(
-          leading: Icon(Icons.dynamic_feed, color: Color(0xFF373F51), size: 30.0,),
+          leading: Icon(Icons.dynamic_feed, color: Color(0xFF373F51), size: 25.0,),
           title: new Text('Theme', style: TextStyle(fontFamily: 'Abel', fontSize: 25,),),
           onTap: (){
             Navigator.push(context, MaterialPageRoute(
@@ -44,7 +44,7 @@ class _otherSettingPageState extends State<otherSettingPage> {
         Divider(),
        SizedBox(height: 15),
         new ListTile(
-          leading: Icon(Icons.help_outline, color: Color(0xFF373F51), size: 30.0,),
+          leading: Icon(Icons.help_outline, color: Color(0xFF373F51), size: 25.0,),
           title: new Text('Support', style: TextStyle(fontFamily: 'Abel', fontSize: 25,),),
           onTap: (){
             Navigator.push(context, MaterialPageRoute(
@@ -56,7 +56,7 @@ class _otherSettingPageState extends State<otherSettingPage> {
         Divider(),
         SizedBox(height: 15),
         new ListTile(
-          leading: Icon(Icons.info, color: Color(0xFF373F51), size: 30.0,),
+          leading: Icon(Icons.info, color: Color(0xFF373F51), size: 25.0,),
           title: new Text('About', style: TextStyle(fontFamily: 'Abel', fontSize: 25,),),
           onTap: (){
             Navigator.push(context, MaterialPageRoute(
@@ -68,7 +68,7 @@ class _otherSettingPageState extends State<otherSettingPage> {
         Divider(),
         SizedBox(height: 15),
         new ListTile(
-          leading: Icon(Icons.toc, color: Color(0xFF373F51), size: 30.0,),
+          leading: Icon(Icons.toc, color: Color(0xFF373F51), size: 25.0,),
           title: new Text('Application Version', style: TextStyle(fontFamily: 'Abel', fontSize: 25,),),
           onTap: (){
             Navigator.push(context, MaterialPageRoute(
