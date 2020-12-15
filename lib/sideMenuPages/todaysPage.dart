@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'upComingPage.dart';
-import '../main.dart';
-import 'package:to_dolist/calendarPage.dart';
+import 'file:///C:/Users/Dell/AndroidStudioProjects/to_dolist/lib/sideMenuPages/calendarPage.dart';
 import 'settingsPage.dart';
+import 'file:///C:/Users/Dell/AndroidStudioProjects/to_dolist/lib/Widgets/appBarDesign.dart';
+import 'file:///C:/Users/Dell/AndroidStudioProjects/to_dolist/lib/Widgets/bottomAppBar.dart';
+import 'file:///C:/Users/Dell/AndroidStudioProjects/to_dolist/lib/Widgets/constants.dart';
+import 'file:///C:/Users/Dell/AndroidStudioProjects/to_dolist/lib/Widgets/icons_content.dart';
 
 class pageTomorrow extends StatefulWidget {
   @override
@@ -13,42 +16,35 @@ class _pageTomorrowState extends State<pageTomorrow> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFF2FDFF),
+      backgroundColor: kBackgroundColor,
       appBar: AppBar(
-        backgroundColor: Color(0xFF373F51),
+        backgroundColor: kAppBarBackground,
         title: Text(
           'Today',
-          style: TextStyle(
-            color: Color(0xFFF2FDFF),
-            fontFamily: 'BebasNeue',
-            fontSize: 26.0,
-          ),
+          style: kAppBarTextStyle,
         ),
       ),
       drawer: new Drawer(
         child: ListView(
           padding: EdgeInsets.zero,
           children: <Widget>[
-            new DrawerHeader(child: Text('Today', style: TextStyle(
-                fontFamily: 'BebasNeue',
-                fontSize: 35.0,
-                color: Colors.white),),
+            new DrawerHeader(child: Text('Today', style: kDrawerHeaderTextStyle,),
               decoration: BoxDecoration(
                 color: Color(0xFF373F51),
               ),
             ),
             SizedBox(height: 5),
             new ListTile(
-              leading: Icon(Icons.view_agenda, color: Color(0xFF373F51), size: 25.0,),
-              title: new Text('Inbox', style: TextStyle(fontFamily: 'Abel', fontSize: 17.0),),
+              leading: IconContent(icon: Icons.view_agenda),
+              title: new Text('Inbox', style: kDrawerTextStyle,),
               onTap: () {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => listScreen()));},
             ),
             SizedBox(height: 5),
             new ListTile(
-              leading: Icon(Icons.date_range, color: Color(0xFF373F51), size: 25.0,),
-              title: new Text('Upcoming Tasks', style: TextStyle(fontFamily: 'Abel', fontSize: 17.0),),
+              leading: IconContent(icon: Icons.date_range),
+              title: new Text('Upcoming Tasks', style: kDrawerTextStyle,),
               onTap: (){
                 Navigator.of(context).pop();
                 Navigator.push(context, MaterialPageRoute(
@@ -58,8 +54,8 @@ class _pageTomorrowState extends State<pageTomorrow> {
             ),
             SizedBox(height: 5),
             new ListTile(
-              leading: Icon(Icons.calendar_today, color: Color(0xFF373F51), size: 25.0,),
-              title: new Text('Calendar', style: TextStyle(fontFamily: 'Abel', fontSize: 17.0),),
+              leading: IconContent(icon: Icons.calendar_today),
+              title: new Text('Calendar', style: kDrawerTextStyle,),
               onTap: (){
                 Navigator.of(context).pop();
                 Navigator.push(context, MaterialPageRoute(
@@ -70,8 +66,8 @@ class _pageTomorrowState extends State<pageTomorrow> {
             Divider(color: Colors.black54,),
             SizedBox(height: 5),
             new ListTile(
-              leading: Icon(Icons.settings, color: Color(0xFF373F51), size: 25.0,),
-              title: new Text('Settings', style: TextStyle(fontFamily: 'Abel', fontSize: 17.0),),
+              leading: IconContent(icon: Icons.settings),
+              title: new Text('Settings', style: kDrawerTextStyle,),
               onTap: (){
                 Navigator.of(context).pop();
                 Navigator.push(context, MaterialPageRoute(

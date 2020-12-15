@@ -1,26 +1,40 @@
+import 'package:table_calendar/table_calendar.dart';
 import 'package:flutter/material.dart';
 import 'todaysPage.dart';
-import 'file:///C:/Users/Dell/AndroidStudioProjects/to_dolist/lib/sideMenuPages/calendarPage.dart';
 import 'settingsPage.dart';
-import 'file:///C:/Users/Dell/AndroidStudioProjects/to_dolist/lib/Widgets/appBarDesign.dart';
-import 'file:///C:/Users/Dell/AndroidStudioProjects/to_dolist/lib/Widgets/bottomAppBar.dart';
-import 'file:///C:/Users/Dell/AndroidStudioProjects/to_dolist/lib/Widgets/constants.dart';
 import 'file:///C:/Users/Dell/AndroidStudioProjects/to_dolist/lib/Widgets/icons_content.dart';
+import 'file:///C:/Users/Dell/AndroidStudioProjects/to_dolist/lib/Widgets/appBarDesign.dart';
+import 'file:///C:/Users/Dell/AndroidStudioProjects/to_dolist/lib/Widgets/constants.dart';
+import 'upComingPage.dart';
 
-class tasksPage extends StatefulWidget {
+class calendar extends StatefulWidget {
   @override
-  _tasksPageState createState() => _tasksPageState();
+  _calendarState createState() => _calendarState();
 }
 
-class _tasksPageState extends State<tasksPage> {
+class _calendarState extends State<calendar> {
+  CalendarController _calendarController;
+  @override
+  void initState(){
+    super.initState();
+    _calendarController = CalendarController();
+  }
+  @override
+  void dispose(){
+    _calendarController.dispose();
+    super.dispose(); // calendar state
+  }
+  Widget _calendarTest(){
+    return TableCalendar(calendarController: _calendarController); // making a new tabel
+
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: kBackgroundColor,
       appBar: AppBar(
         backgroundColor: kAppBarBackground,
-        title: Text(
-          'Upcoming Tasks',
+        title: Text('Calendar',
           style: kAppBarTextStyle,
         ),
       ),
@@ -28,7 +42,7 @@ class _tasksPageState extends State<tasksPage> {
         child: ListView(
           padding: EdgeInsets.zero,
           children: <Widget>[
-            new DrawerHeader(child: Text('Upcoming', style: kDrawerHeaderTextStyle,),
+            new DrawerHeader(child: Text('Calendar', style: kDrawerHeaderTextStyle,),
               decoration: BoxDecoration(
                 color: Color(0xFF373F51),
               ),
@@ -54,12 +68,12 @@ class _tasksPageState extends State<tasksPage> {
             ),
             SizedBox(height: 5),
             new ListTile(
-              leading: IconContent(icon: Icons.calendar_today),
-              title: new Text('Calendar', style: kDrawerTextStyle,),
+              leading: IconContent(icon: Icons.date_range),
+              title: new Text('Upcoming Tasks', style: kDrawerTextStyle,),
               onTap: (){
                 Navigator.of(context).pop();
                 Navigator.push(context, MaterialPageRoute(
-                    builder: (context) => calendar())
+                    builder: (context) => tasksPage())
                 );
               },
             ),
@@ -79,7 +93,11 @@ class _tasksPageState extends State<tasksPage> {
           ],
         ),
       ),
-      body: toDoList(),
+      body: Container(
+        child: _calendarTest(),
+      ),
     );
   }
 }
+
+

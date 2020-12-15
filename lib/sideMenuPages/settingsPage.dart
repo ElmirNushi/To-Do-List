@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'todaysPage.dart';
 import 'otherSettingsPages/themePage.dart';
 import 'otherSettingsPages/supportPage.dart';
 import 'otherSettingsPages/aboutPage.dart';
