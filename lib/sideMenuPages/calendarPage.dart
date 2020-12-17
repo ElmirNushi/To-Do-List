@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'todaysPage.dart';
 import 'settingsPage.dart';
 import 'file:///C:/Users/Dell/AndroidStudioProjects/to_dolist/lib/Widgets/icons_content.dart';
-import 'file:///C:/Users/Dell/AndroidStudioProjects/to_dolist/lib/Widgets/appBarDesign.dart';
+import 'inboxPage.dart';
 import 'file:///C:/Users/Dell/AndroidStudioProjects/to_dolist/lib/Widgets/constants.dart';
 import 'upComingPage.dart';
 

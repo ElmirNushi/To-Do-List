@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'todaysPage.dart';
 import 'file:///C:/Users/Dell/AndroidStudioProjects/to_dolist/lib/sideMenuPages/calendarPage.dart';
 import 'settingsPage.dart';
-import 'file:///C:/Users/Dell/AndroidStudioProjects/to_dolist/lib/Widgets/appBarDesign.dart';
-import 'file:///C:/Users/Dell/AndroidStudioProjects/to_dolist/lib/Widgets/bottomAppBar.dart';
+import 'inboxPage.dart';
 import 'file:///C:/Users/Dell/AndroidStudioProjects/to_dolist/lib/Widgets/constants.dart';
 import 'file:///C:/Users/Dell/AndroidStudioProjects/to_dolist/lib/Widgets/icons_content.dart';
+import 'package:to_dolist/newTaskAllPAges/newEventPage.dart';
 
 class tasksPage extends StatefulWidget {
   @override
@@ -79,7 +79,43 @@ class _tasksPageState extends State<tasksPage> {
           ],
         ),
       ),
-      body: toDoList(),
+      body: Center(child: Text('Test')),
+      floatingActionButton: FloatingActionButton(onPressed: () {
+        showDialog(
+            barrierDismissible: false,
+            context: context,
+            builder: (BuildContext context){
+              return Dialog(
+                  child: EventAddPage(),
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(12))
+                  )
+              );
+            }
+        );
+      },
+        child: Icon(Icons.add, color: Color(0xFFF2FDFF), size: 38.0,),
+        backgroundColor: Color(0xFF373F51),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      bottomNavigationBar: BottomAppBar(
+        child: Container(
+          color: Color(0xFFF2FDFF),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: <Widget>[
+              IconButton(icon: IconContent(icon: Icons.settings), onPressed: (){
+                Navigator.push(context, MaterialPageRoute(
+                    builder: (context) => settingPage()),);
+              },),
+              IconButton(icon: IconContent(icon: Icons.calendar_today,), onPressed: (){
+                Navigator.push(context, MaterialPageRoute(
+                    builder: (context) => calendar()),);
+              },),
+            ],
+          ),
+        ),
+      ),
     );
   }
 }
