@@ -2,9 +2,9 @@ import 'package:table_calendar/table_calendar.dart';
 import 'package:flutter/material.dart';
 import 'todaysPage.dart';
 import 'settingsPage.dart';
-import 'file:///C:/Users/Dell/AndroidStudioProjects/to_dolist/lib/Widgets/icons_content.dart';
 import 'inboxPage.dart';
-import 'file:///C:/Users/Dell/AndroidStudioProjects/to_dolist/lib/Widgets/constants.dart';
+import 'package:to_dolist/Widgets/constants.dart';
+import 'package:to_dolist/Widgets/icons_content.dart';
 import 'upComingPage.dart';
 
 class calendar extends StatefulWidget {

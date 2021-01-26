@@ -1,4 +1,3 @@
-import 'file:///C:/Users/Dell/AndroidStudioProjects/to_dolist/lib/sideMenuPages/settingsPage.dart';
 import 'package:flutter/material.dart';
 
 class aboutPage extends StatelessWidget {

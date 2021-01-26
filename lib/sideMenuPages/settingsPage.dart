@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'otherSettingsPages/themePage.dart';
 import 'otherSettingsPages/supportPage.dart';
 import 'otherSettingsPages/aboutPage.dart';
 import 'otherSettingsPages/versionPage.dart';
@@ -30,18 +29,6 @@ class _otherSettingPageState extends State<otherSettingPage> {
     return ListView(
       children: <Widget>[
         SizedBox(height: 20),
-        new ListTile(
-          leading: Icon(Icons.dynamic_feed, color: Color(0xFF373F51), size: 25.0,),
-          title: new Text('Theme', style: TextStyle(fontFamily: 'Abel', fontSize: 25,),),
-          onTap: (){
-            Navigator.push(context, MaterialPageRoute(
-                builder: (context) => themePage())
-            );
-          },
-        ),
-        SizedBox(height: 15),
-        Divider(),
-       SizedBox(height: 15),
         new ListTile(
           leading: Icon(Icons.help_outline, color: Color(0xFF373F51), size: 25.0,),
           title: new Text('Support', style: TextStyle(fontFamily: 'Abel', fontSize: 25,),),

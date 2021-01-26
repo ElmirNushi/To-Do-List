@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'todaysPage.dart';
-import 'file:///C:/Users/Dell/AndroidStudioProjects/to_dolist/lib/sideMenuPages/calendarPage.dart';
+import 'calendarPage.dart';
 import 'settingsPage.dart';
 import 'inboxPage.dart';
-import 'file:///C:/Users/Dell/AndroidStudioProjects/to_dolist/lib/Widgets/constants.dart';
-import 'file:///C:/Users/Dell/AndroidStudioProjects/to_dolist/lib/Widgets/icons_content.dart';
+import 'package:to_dolist/Widgets/constants.dart';
+import 'package:to_dolist/Widgets/icons_content.dart';
 import 'package:to_dolist/newTaskAllPAges/newEventPage.dart';
 
 class tasksPage extends StatefulWidget {

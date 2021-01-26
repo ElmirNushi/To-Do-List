@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'file:///C:/Users/Dell/AndroidStudioProjects/to_dolist/lib/Widgets/customTextField.dart';
-import 'file:///C:/Users/Dell/AndroidStudioProjects/to_dolist/lib/Widgets/custom_button.dart';
+import 'package:to_dolist/Widgets/customTextField.dart';
+import 'package:to_dolist/Widgets/custom_button.dart';
 
 class TaskAddPage extends StatefulWidget {
   @override

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'file:///C:/Users/Dell/AndroidStudioProjects/to_dolist/lib/sideMenuPages/calendarPage.dart';
-import 'file:///C:/Users/Dell/AndroidStudioProjects/to_dolist/lib/sideMenuPages/todaysPage.dart';
+import 'calendarPage.dart';
+import 'todaysPage.dart';
 import '../newTaskAllPAges/newEventPage.dart';
 import 'upComingPage.dart';
 import 'settingsPage.dart';

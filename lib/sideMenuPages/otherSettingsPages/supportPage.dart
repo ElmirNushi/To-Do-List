@@ -1,4 +1,3 @@
-import 'file:///C:/Users/Dell/AndroidStudioProjects/to_dolist/lib/sideMenuPages/settingsPage.dart';
 import 'package:flutter/material.dart';
 
 class supportPage extends StatelessWidget {
@@ -15,6 +14,13 @@ class supportPage extends StatelessWidget {
             fontSize: 26.0,
           ),
         ),
+      ),
+      body: Column(
+        children: <Widget>[
+          Container(
+            
+          ),
+        ],
       ),
     );
   }
