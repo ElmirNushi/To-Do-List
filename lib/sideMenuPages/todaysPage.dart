@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'upComingPage.dart';
+import 'upComingWeek.dart';
 import 'calendarPage.dart';
 import 'settingsPage.dart';
-import 'inboxPage.dart';
+import 'allTasks.dart';
 import 'package:to_dolist/Widgets/constants.dart';
 import 'package:to_dolist/Widgets/icons_content.dart';
 import 'package:to_dolist/newTaskAllPAges/newEventPage.dart';
@@ -36,7 +36,7 @@ class _pageTomorrowState extends State<pageTomorrow> {
             SizedBox(height: 5),
             new ListTile(
               leading: IconContent(icon: Icons.view_agenda),
-              title: new Text('Inbox', style: kDrawerTextStyle,),
+              title: new Text('All Tasks', style: kDrawerTextStyle,),
               onTap: () {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => listScreen()));},
@@ -44,7 +44,7 @@ class _pageTomorrowState extends State<pageTomorrow> {
             SizedBox(height: 5),
             new ListTile(
               leading: IconContent(icon: Icons.date_range),
-              title: new Text('Upcoming Tasks', style: kDrawerTextStyle,),
+              title: new Text('Upcoming Week', style: kDrawerTextStyle,),
               onTap: (){
                 Navigator.of(context).pop();
                 Navigator.push(context, MaterialPageRoute(

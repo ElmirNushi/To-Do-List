@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'sideMenuPages/inboxPage.dart';
+import 'sideMenuPages/allTasks.dart';
 
 void main() {
   runApp(MyApp());

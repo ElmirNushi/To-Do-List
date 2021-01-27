@@ -2,10 +2,10 @@ import 'package:table_calendar/table_calendar.dart';
 import 'package:flutter/material.dart';
 import 'todaysPage.dart';
 import 'settingsPage.dart';
-import 'inboxPage.dart';
+import 'allTasks.dart';
 import 'package:to_dolist/Widgets/constants.dart';
 import 'package:to_dolist/Widgets/icons_content.dart';
-import 'upComingPage.dart';
+import 'upComingWeek.dart';
 
 class calendar extends StatefulWidget {
   @override
