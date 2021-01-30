@@ -16,4 +16,8 @@ const kDrawerHeaderTextStyle = TextStyle(
 
 const kDrawerTextStyle = TextStyle(fontFamily: 'Abel', fontSize: 17.0);
 
+const kTaskNameDetails = TextStyle(fontFamily: 'Abel', fontSize: 23.0, color: Color(0xFF373F51));
+
+const kTaskDetails = TextStyle(fontFamily: 'Abel', fontSize: 17.0, color: Color(0xFF373F51));
+
 

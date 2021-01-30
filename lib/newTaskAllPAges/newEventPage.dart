@@ -9,8 +9,8 @@ class EventAddPage extends StatefulWidget {
 
 class _EventAddPageState extends State<EventAddPage> {
 
-  String _selectedDate = 'Pick Date For The Task';
-  String _selectedTime = 'Pick Time For The Task';
+  String _selectedDate = 'Pick Date';
+  String _selectedTime = 'Pick Time';
 
   Future _pickDate() async {
     DateTime datepick = await showDatePicker(

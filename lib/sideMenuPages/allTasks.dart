@@ -6,6 +6,7 @@ import 'upComingWeek.dart';
 import 'settingsPage.dart';
 import '../Widgets/constants.dart';
 import '../Widgets/icons_content.dart';
+import 'package:to_dolist/Widgets/taskDetails.dart';
 
 class listScreen extends StatelessWidget {
   @override
@@ -76,41 +77,7 @@ class listScreen extends StatelessWidget {
           ],
         ),
       ),
-      body: Container(
-        child: ListView(
-          padding: EdgeInsets.zero,
-          children: <Widget>[
-            SizedBox(height: 5),
-            new ListTile(
-              leading: IconContent(icon: Icons.lens),
-              title: new Text('Finish the Flutter Project', style: TextStyle(color: Color(0xFF373F51), fontFamily: 'Abel', fontSize: 25.0,),),
-              onTap: (){},
-            ),
-            Divider(
-              height: 5.0,
-              color: Colors.black54,
-            ),
-            new ListTile(
-              leading: IconContent(icon: Icons.lens),
-              title: new Text('Study for Java Exam', style: TextStyle(color: Color(0xFF373F51), fontFamily: 'Abel', fontSize: 25.0,),),
-              onTap: (){},
-            ),
-            Divider(
-              height: 5.0,
-              color: Colors.black54,
-            ),
-            new ListTile(
-              leading: IconContent(icon: Icons.lens),
-              title: new Text('Study for Web Sherbime', style: TextStyle(color: Color(0xFF373F51), fontFamily: 'Abel', fontSize: 25.0,),),
-              onTap: (){},
-            ),
-            Divider(
-              height: 5.0,
-              color: Colors.black54,
-            ),
-          ],
-        ),
-      ),
+      body: bodyPart(),
           floatingActionButton: FloatingActionButton(onPressed: () {
             showDialog(
                 barrierDismissible: false,
@@ -148,5 +115,91 @@ class listScreen extends StatelessWidget {
             ),
           ),
         );
+  }
+}
+
+
+class bodyPart extends StatefulWidget {
+  @override
+  _bodyPartState createState() => _bodyPartState();
+}
+
+class _bodyPartState extends State<bodyPart> {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: ListView(
+        padding: EdgeInsets.zero,
+        children: <Widget>[
+          SizedBox(height: 5),
+          new ListTile(
+            leading: IconContent(icon: Icons.arrow_right),
+            title: new Text('Finish the Flutter Project', style: TextStyle(color: Color(0xFF373F51), fontFamily: 'Abel', fontSize: 22.0,),),
+            onTap: (){
+              showDialog(
+                  barrierDismissible: false,
+                  context: context,
+                  builder: (BuildContext context){
+                    return Dialog(
+                        child: taskDetails(),
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.all(Radius.circular(12))
+                        )
+                    );
+                  }
+              );
+            },
+          ),
+          Divider(
+            height: 5.0,
+            color: Colors.black54,
+          ),
+          new ListTile(
+            leading: IconContent(icon: Icons.arrow_right),
+            title: new Text('Study for Java Exam', style: TextStyle(color: Color(0xFF373F51), fontFamily: 'Abel', fontSize: 22.0,),),
+            onTap: (){
+              showDialog(
+                  barrierDismissible: false,
+                  context: context,
+                  builder: (BuildContext context){
+                    return Dialog(
+                        child: taskDetails(),
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.all(Radius.circular(12))
+                        )
+                    );
+                  }
+              );
+            },
+          ),
+          Divider(
+            height: 5.0,
+            color: Colors.black54,
+          ),
+          new ListTile(
+            leading: IconContent(icon: Icons.arrow_right),
+            title: new Text('Study for Web Sherbime', style: TextStyle(color: Color(0xFF373F51), fontFamily: 'Abel', fontSize: 22.0,),),
+            onTap: (){
+              showDialog(
+                  barrierDismissible: false,
+                  context: context,
+                  builder: (BuildContext context){
+                    return Dialog(
+                        child: taskDetails(),
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.all(Radius.circular(12))
+                        )
+                    );
+                  }
+              );
+            },
+          ),
+          Divider(
+            height: 5.0,
+            color: Colors.black54,
+          ),
+        ],
+      ),
+    );
   }
 }
