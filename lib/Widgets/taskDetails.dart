@@ -28,11 +28,10 @@ class _taskDetailsState extends State<taskDetails> {
           SizedBox(height: 4),
           Text('11:52', style: kTaskDetails),
           SizedBox(height: 10),
-          customTextField(labelText: 'Add a note for the task: '),
-          SizedBox(height: 10),
           _actionButton(context)
         ],
       ),
+
     );
   }
 
@@ -40,10 +39,8 @@ class _taskDetailsState extends State<taskDetails> {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: <Widget>[
-        CustomButton(onPressed: () {
-          Navigator.of(context).pop();
-        }, buttonText: 'Close', ),
-        CustomButton(onPressed: () {}, buttonText: 'Finish Task'),
+        CustomButton(onPressed: () {}, buttonText: 'Update'),
+        CustomButton(onPressed: () {}, buttonText: 'Finish'),
       ],
     );
   }

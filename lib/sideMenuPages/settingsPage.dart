@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'otherSettingsPages/supportPage.dart';
 import 'otherSettingsPages/aboutPage.dart';
 import 'otherSettingsPages/versionPage.dart';
 import 'otherSettingsPages/languagePage.dart';
@@ -37,21 +36,11 @@ class _otherSettingPageState extends State<otherSettingPage> {
             children: <Widget>[
               SizedBox(height: 8),
               new ListTile(
-                leading: Icon(Icons.wysiwyg, color: Color(0xFF373F51), size: 25.0,),
+                leading: Icon(Icons.public, color: Color(0xFF373F51), size: 25.0,),
                 title: new Text('Language', style: TextStyle(fontFamily: 'Abel', fontSize: 20,),),
                 onTap: (){
                   Navigator.push(context, MaterialPageRoute(
                       builder: (context) => languagePage())
-                  );
-                },
-              ),
-              SizedBox(height: 8),
-              new ListTile(
-                leading: Icon(Icons.help_outline, color: Color(0xFF373F51), size: 25.0,),
-                title: new Text('Support', style: TextStyle(fontFamily: 'Abel', fontSize: 20,),),
-                onTap: (){
-                  Navigator.push(context, MaterialPageRoute(
-                      builder: (context) => supportPage())
                   );
                 },
               ),
